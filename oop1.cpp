@@ -7,9 +7,11 @@ class AbstractEmployee {
 
 class Employee:AbstractEmployee {
 private:
-    string Name;
     string Company;
     int Age;
+
+protected:
+    string Name;
 
 public:
     void setName(string name) { //setter
@@ -55,18 +57,49 @@ public:
 
 };
 
+class Developer: public Employee {
+public:
+    string FavProgrammingLanguage;
+    Developer(string name, string company, int age, string favProgrammingLanguage) 
+    : Employee(name, company, age)
+    {
+        FavProgrammingLanguage = favProgrammingLanguage;
+    };
+};
+
+class Teacher: public Employee {
+private:
+    string Subject;
+public:
+    Teacher(string name, string company, int age, string subject) 
+    : Employee(name, company, age) 
+    {
+        Subject = subject;
+    }
+
+    void PrepareLesson() {
+        cout << Name << " is preparing " << Subject << " lesson" << endl;
+    }
+};
+
 int main() {
-    Employee employee1 = Employee("Tushar", "TusharDevelops", 21);
-    employee1.Introduce();
+    // Employee employee1 = Employee("Tushar", "TusharDevelops", 21);
+    // employee1.Introduce();
 
-    Employee employee2 = Employee("John", "Amazon", 25);
-    employee2.Introduce();
+    // Employee employee2 = Employee("John", "Amazon", 25);
+    // employee2.Introduce();
 
-    employee2.setAge(39);
-    cout << employee2.getName() << " is " << employee2.getAge() << " years old." << endl;
+    // employee2.setAge(39);
+    // cout << employee2.getName() << " is " << employee2.getAge() << " years old." << endl;
 
-    employee1.AskForPromotion();
-    employee2.AskForPromotion();
+    // employee1.AskForPromotion();
+    // employee2.AskForPromotion();
+
+    Developer d = Developer("Tushar", "TusharDevelops", 21, "C++");
+    Teacher t = Teacher("Saldina", "Amazon", 35, "Computer Science");
+    t.PrepareLesson();
+    t.AskForPromotion();
+    d.AskForPromotion();
 
 
     return 0;
