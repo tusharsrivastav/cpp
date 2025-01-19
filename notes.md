@@ -83,10 +83,10 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 1. **Single**
     - one base class is inherited by one derived class only
-        ```mermaid
+        ::: mermaid
         flowchart TD;
             A[class A] --> B[class B];
-        ```
+        :::
 
 2. **Multiple**
     - one subclass is inherited from more than one base class
