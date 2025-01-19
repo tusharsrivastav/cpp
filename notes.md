@@ -51,3 +51,18 @@ string getName() { //getter
     return Name;
 }
 ```
+
+## 2. Abstraction
+Abstraction refers to providing only the essential information and hiding the unnessecary details or implementation.
+
+In C++, abstraction can be achieved by using abstract classes.
+
+An abstract class is a class that has at least one 'pure virtual' function.
+
+```
+class AbstractEmployee {
+    virtual void AskForPromotion()=0; //pure virtual function
+};
+```
+
+- An abstract class introduces a contract which ensure that derived classes provide specific implementation for the abstract methods.
