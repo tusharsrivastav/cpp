@@ -83,6 +83,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 1. **Single**
     - one base class is inherited by one derived class only
+
         ::: mermaid
         flowchart TD;
             A[class A] --> B[class B];
@@ -90,6 +91,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 2. **Multiple**
     - one subclass is inherited from more than one base class
+
         ::: mermaid
         flowchart TD;
             A[class A] --> C[class C];
@@ -98,6 +100,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 3. **Multilevel**
     - a derived class is created from another derived class and that derived class can be derived from a base class or any other derived class
+
         ::: mermaid
         flowchart TD;
             A[class A] --> B[class B] --> C[class C];
@@ -105,6 +108,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 4. **Heirarchical**
     - more than one subclass is inherited from a single base class
+
         ::: mermaid
         flowchart TD;
             A[class A] --> B[class B];
@@ -114,6 +118,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 5. **Hybrid**
     - implemented by combining more than one type of inheritance
+    
         ::: mermaid
         flowchart TD;
             A[class A] --> B[class B] --> D[class D];
