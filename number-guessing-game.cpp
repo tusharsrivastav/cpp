@@ -1,8 +1,6 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-// using namespace std;
-using std::string;
 
 int main() {
     srand(time(0));
