@@ -118,7 +118,7 @@ Mode of inheritance controls the access level of the inherited members of the ba
 
 5. **Hybrid**
     - implemented by combining more than one type of inheritance
-    
+
         ::: mermaid
         flowchart TD;
             A[class A] --> B[class B] --> D[class D];
@@ -138,3 +138,4 @@ Mode of inheritance controls the access level of the inherited members of the ba
     ```
 
     > In general, it is not allowed to call the grandparent’s constructor directly, it has to be called through parent class. It is allowed only when ‘virtual’ keyword is used.
+

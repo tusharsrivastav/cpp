@@ -55,6 +55,10 @@ public:
         }
     }
 
+    void Work() {
+        cout << Name << " is checking emails, task backlog, performing tasks..." << endl;
+    }
+
 };
 
 class Developer: public Employee {
@@ -65,6 +69,10 @@ public:
     {
         FavProgrammingLanguage = favProgrammingLanguage;
     };
+
+    void Work() {
+        cout << Name << " is fixing bugs and writing " << FavProgrammingLanguage << " code" << endl;
+    }
 };
 
 class Teacher: public Employee {
@@ -79,6 +87,9 @@ public:
 
     void PrepareLesson() {
         cout << Name << " is preparing " << Subject << " lesson" << endl;
+    }
+    void Work() {
+        cout << Name << " is teaching " << Subject << " class" << endl;
     }
 };
 
@@ -97,9 +108,12 @@ int main() {
 
     Developer d = Developer("Tushar", "TusharDevelops", 21, "C++");
     Teacher t = Teacher("Saldina", "Amazon", 35, "Computer Science");
-    t.PrepareLesson();
-    t.AskForPromotion();
-    d.AskForPromotion();
+    // t.PrepareLesson();
+    // t.AskForPromotion();
+    // d.AskForPromotion();
+
+    d.Work();
+    t.Work();
 
 
     return 0;
